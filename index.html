@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurant de la Mer</title>
+  <!-- Modifie le chemin si besoin selon où tu mets le CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+
+
+</head>
+<body>
+  <header>
+    <h1>Taverne du Dauphin</h1>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#reservation">Réservation</a></li>
+        <li><a href="#avis">Avis clients</a></li>
+        <li><a href="#localisation">Localisation</a></li>
+      </ul>
+    </nav>
+    
+
+  </header>
+
+  <section id="accueil">
+  <div class="accueil-container">
+    <h2>Bienvenue à La Taverne du Dauphin</h2>
+    <p>Découvrez la fraîcheur de la mer dans chaque plat, préparé avec passion et savoir-faire.</p>
+    <a href="#menu" class="btn-primary">Voir notre menu</a>
+  </div>
+</section>
+
+ <section id="menu" class="fade-in">
+  <h2>Notre Menu</h2>
+  <div class="menu-grid">
+    <div class="menu-item" data-image="images/Poisson grié.png">
+      <h3>Poisson Grillé</h3>
+      <p>Servi avec pommes de terre rôties et sauce citronnée.</p>
+      <span class="prix">180 Dh</span>
+    </div>
+    <div class="menu-item" data-image="images/Brochettes de calamars.jpg">
+      <h3>Calamars Frits</h3>
+      <p>Calamars croustillants, accompagnés de sauce tartare.</p>
+      <span class="prix">150 Dh</span>
+    </div>
+    <div class="menu-item" data-image="images/soupe poisson.jpg">
+      <h3>Soupe de la Mer</h3>
+      <p>Délicieuse soupe aux fruits de mer et herbes fraîches.</p>
+      <span class="prix">100 Dh</span>
+    </div>
+    <div class="menu-item" data-image="images/Tartare de thon.jpg">
+      <h3>Daurade au Four</h3>
+      <p>Cuisson parfaite avec tomates cerises et citron confit.</p>
+      <span class="prix">250 Dh</span>
+    </div>
+  </div>
+</section>
+
+  <section id="galerie">
+    <h2>Galerie</h2>
+    <div class="galerie">
+      <figure>
+        <img src="images/Poisson grié.png" alt="Poisson grillé" />
+        <figcaption>Poisson grillé, sauce citronnée</figcaption>
+      </figure>
+      <figure>
+        <img src="images/soupe poisson.jpg" alt="Soupe de poisson" />
+        <figcaption>Soupe de poisson traditionnelle</figcaption>
+      </figure>
+      <figure>
+        <img src="images/Plateau de fruits de mer.jpg" alt="Plateau de fruits de mer" />
+        <figcaption>Plateau de fruits de mer frais</figcaption>
+      </figure>
+      <figure>
+        <img src="images/Brochettes de calamars.jpg" alt="Brochettes de calamars" />
+        <figcaption>Brochettes de calamars marinés</figcaption>
+      </figure>
+      <figure>
+        <img src="images/Saumon fumé.jpg" alt="Saumon fumé" />
+        <figcaption>Saumon fumé maison</figcaption>
+      </figure>
+      <figure>
+        <img src="images/Tartare de thon.jpg" alt="Tartare de thon" />
+        <figcaption>Tartare de thon frais</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="contact">
+  <h2>Contact</h2>
+  <p><i class="fas fa-phone"></i> Téléphone : 01 23 45 67 89</p>
+  <p><i class="fas fa-envelope"></i> Email : contact@restaurantpoisson.com</p>
+  <p><i class="fas fa-map-marker-alt"></i> Adresse : 123 Rue de la Mer, Paris</p>
+</section>
+<section id="equipe" class="equipe-section">
+  <h2>Notre Équipe</h2>
+  <div class="equipe-container">
+    <div class="membre">
+      <img src="images/chef aziz.jpg" alt="Chef aziz">
+      <h3>Chef Aziz</h3>
+      <p>Spécialiste des fruits de mer, 15 ans d'expérience en cuisine méditerranéenne.</p>
+    </div>
+    <div class="membre">
+      <img src="images/serveuse.jpg" alt="Nadia">
+      <h3>Nadia</h3>
+      <p>Responsable du service, elle vous accueille avec sourire et professionnalisme.</p>
+    </div>
+    <div class="membre">
+      <img src="images/chef karim.jpg" alt="Chef karim">
+      <h3>Chef Karim</h3>
+      <p>Passionnée de cuisine fusion, elle ajoute sa touche créative à chaque plat.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <section id="reservation">
+    
+    <h2>Réservation</h2>
+    <form action="reservation.php" method="post" id="formReservation">
+      <label for="nom">Nom complet :</label>
+      <input type="text" id="nom" name="nom" required />
+
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="date">Date de réservation :</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="heure">Heure :</label>
+      <input type="time" id="heure" name="heure" required />
+
+      <label for="personnes">Nombre de personnes :</label>
+      <input type="number" id="personnes" name="personnes" min="1" max="20" required />
+
+      <button type="submit">Réserver</button>
+    </form>
+    <p id="message"></p>
+  </section>
+
+  <section id="avis">
+    <h2>Avis clients</h2>
+    <div class="avis-item">
+      <p>Une expérience incroyable, des plats frais et délicieux. Je recommande vivement !</p>
+      <div class="client">- Marine D.</div>
+    </div>
+    <div class="avis-item">
+      <p>Le meilleur restaurant de fruits de mer que j'ai visité, ambiance cosy et service au top.</p>
+      <div class="client">- Julien P.</div>
+    </div>
+    <div class="avis-item">
+      <p>Un vrai régal, la qualité est au rendez-vous et le personnel est très accueillant.</p>
+      <div class="client">- Sophie M.</div>
+    </div>
+  </section>
+  <section id="localisation">
+  <h2>Notre Localisation</h2>
+  <div class="localisation-container">
+    <div class="map">
+     
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.325681436004!2d-7.618843484798891!3d33.58988688072826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d36cb4ed14f7%3A0xd2e1d9a1724391c4!2sCasablanca!5e0!3m2!1sfr!2sma!4v1690462633151!5m2!1sfr!2sma" 
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="adresse">
+      <h3>Adresse</h3>
+      <p>123 Boulevard de Casablanca</p>
+      <p>Casablanca, Maroc</p>
+      <p>Téléphone : +212 5 22 00 00 00</p>
+      <p>Email : contact@restaurantcasablanca.ma</p>
+    </div>
+  </div>
+</section>
+<section id="faq">
+  <h2>Questions fréquentes</h2>
+  <div class="faq-item">
+    <button class="faq-question">Quels sont vos horaires d'ouverture ?</button>
+    <div class="faq-answer">Nous sommes ouverts du lundi au dimanche, de 12h à 22h.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">Peut-on réserver en ligne ?</button>
+    <div class="faq-answer">Oui, vous pouvez utiliser notre formulaire de réservation ci-dessus.</div>
+  </div>
+</section>
+<section id="concerts-live">
+  <h2>Concerts Live & Musique d’Ambiance</h2>
+  <p>Venez profiter de nos soirées avec concerts live et musique d’ambiance certains soirs !</p>
+
+  <div>
+    <article>
+      <h3>Vendredi 15 août 2025</h3>
+      <p><strong>Groupe :</strong> Les Vagues Bleues</p>
+      <p><strong>Style :</strong> Jazz & Blues</p>
+      <p><strong>Heure :</strong> 20h00 - 23h00</p>
+    </article>
+
+    <article>
+      <h3>Samedi 30 août 2025</h3>
+      <p><strong>Groupe :</strong> Ocean Chill</p>
+      <p><strong>Style :</strong> Musique d’ambiance & acoustique</p>
+      <p><strong>Heure :</strong> 19h00 - 22h00</p>
+    </article>
+  </div>
+
+  <p>Réservez votre table pour ne pas manquer ces soirées exceptionnelles !</p>
+</section>
+
+
+<footer>
+  <div class="footer-container">
+    <p>&copy; 2025 Restaurant de la Mer. Tous droits réservés.</p>
+    <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+ <script>
+    const form = document.getElementById('formReservation');
+    const message = document.getElementById('message');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const nom = form.nom.value.trim();
+      const email = form.email.value.trim();
+      const date = form.date.value;
+      const heure = form.heure.value;
+      const personnes = form.personnes.value;
+
+      if (!nom || !email || !date || !heure || !personnes) {
+        message.style.color = 'red';
+        message.textContent = 'Merci de remplir tous les champs.';
+        return;
+      }
+
+      message.style.color = 'green';
+      message.textContent = `Merci ${nom}, votre réservation pour ${personnes} personne(s) le ${date} à ${heure} a bien été prise en compte.`;
+
+      form.reset();
+    });
+    const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+  threshold: 0.1,
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('visible');
+    appearOnScroll.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const answer = btn.nextElementSibling;
+    answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+  });
+});
+ const membres = document.querySelectorAll('.membre');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  membres.forEach(m => {
+    m.style.animationPlayState = 'paused';
+    observer.observe(m);
+  });
+  const filtreBtns = document.querySelectorAll('.filtre-btn');
+  const plats = document.querySelectorAll('.menu-item');
+
+  filtreBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filtre = btn.getAttribute('data-filtre');
+
+      // Style actif
+      filtreBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      plats.forEach(plat => {
+        const categorie = plat.getAttribute('data-categorie');
+        if (filtre === 'tous' || filtre === categorie) {
+          plat.style.display = 'block';
+        } else {
+          plat.style.display = 'none';
+        }
+      });
+    });
+  });
+  const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const closeBtn = document.querySelector(".close");
+
+document.querySelectorAll('.menu-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const imgSrc = item.getAttribute('data-image');
+    if (imgSrc) {
+      modalImg.src = imgSrc;
+      modal.style.display = "flex";
+    }
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+
+</script>
+
+
+  
+
+
+
+</body>
+
+ 
+</html>
